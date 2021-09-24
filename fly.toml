@@ -1,6 +1,6 @@
-# fly.toml file generated for redis-example on 2020-10-30T20:01:11-05:00
+# fly.toml file generated for fly-redis on 2021-09-23T20:13:49+01:00
 
-app = "redis-example"
+app = "fly-redis"
 
 [[mounts]]
 source      = "redis_server"
