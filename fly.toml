@@ -2,22 +2,28 @@
 
 app = "fly-redis"
 
+[experimental]
+  private_network = true
+
 [[mounts]]
-source      = "redis_server"
-destination = "/data"
+  source = "redis_server"
+  destination = "/data"
 
-[[services]]
-internal_port = 6379
-protocol      = "tcp"
-
-  [services.concurrency]
-  hard_limit = 25
-  soft_limit = 20
-
-  [[services.ports]]
-  handlers = []
-  port     = "10000"
-
-  [[services.tcp_checks]]
-  interval = 10000
-  timeout  = 2000
+# Uncomment the following to allow external/public access on port 10000
+# Otherwise, just use internal 6PN addresses and port 6379
+#
+# [[services]]
+#   internal_port = 6379
+#   protocol      = "tcp"
+#
+#   [services.concurrency]
+#     hard_limit = 25
+#     soft_limit = 20
+#
+#   [[services.ports]]
+#     handlers = []
+#     port     = "10000"
+#
+#   [[services.tcp_checks]]
+#     interval = 10000
+#     timeout  = 2000
