@@ -1,4 +1,5 @@
-FROM redis:alpine
+ARG REDIS_VERSION
+FROM redis:${REDIS_VERSION}-alpine
 
 RUN apk update && apk add bind-tools
 
