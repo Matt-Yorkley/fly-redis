@@ -1,6 +1,6 @@
-# fly.toml file generated for fly-redis on 2021-09-23T20:13:49+01:00
+# fly.toml file generated for sr-dotcom-redis on 2022-01-02T09:45:41Z
 
-app = "fly-redis"
+app = "sr-dotcom-redis"
 
 [build]
   [build.args]
